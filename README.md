@@ -4,7 +4,7 @@ Scribble app using socket.io user can draw and chat with other users.
 
 Demo: http://scribble-spg.herokuapp.com/
 
-![screenshot](https://github.com/shweshi/scribble/Screenshot.png "Screenshot")
+![screenshot](https://raw.githubusercontent.com/shweshi/scribble/master/Screenshot.png "Screenshot")
 
 ### Local Installation
 ```
@@ -19,9 +19,12 @@ npm start
 
 Open `localhost:3000`
 
-Happy Coding!!!
+### Contributing
 
+Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE OF CONDUCT](CODE_OF_CONDUCT.md) for details.
 
+### License
 
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
 
-
+### Happy Coding!!!
