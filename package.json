@@ -1,0 +1,13 @@
+{
+  "name": "scribble",
+  "version": "0.0.1",
+  "description": "A simple scribble app using socket.io",
+  "main": "index.js",
+  "dependencies": {
+    "express": "4.13.4",
+    "socket.io": "~2.3.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

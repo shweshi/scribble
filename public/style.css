@@ -1,0 +1,279 @@
+/* Fix user-agent */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, input {
+  font-family:
+    "HelveticaNeue-Light",
+    "Helvetica Neue Light",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    "Lucida Grande",
+    sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  word-wrap: break-word;
+}
+
+/* Pages */
+
+.pages {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.page {
+  height: 100%;
+  /* position: absolute; */
+  width: 100%;
+}
+
+/* Login Page */
+
+.login.page {
+  background-color: #fff;
+  position: absolute;
+}
+
+.login.page .form {
+  height: 100px;
+  margin-top: -100px;
+  position: absolute;
+
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+
+.login.page .form .usernameInput {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(34, 34, 34);
+  outline: none;
+  padding-bottom: 15px;
+  text-align: center;
+  width: 400px;
+}
+
+.login.page .title {
+  font-size: 200%;
+}
+
+.login.page .usernameInput {
+  font-size: 200%;
+  letter-spacing: 3px;
+}
+
+.login.page .title, .login.page .usernameInput {
+  color: rgb(34, 34, 34);
+  font-weight: 100;
+}
+
+/* Chat page */
+
+.chat.page {
+  display: none;
+}
+
+/* Font */
+
+.messages {
+  font-size: 150%;
+}
+
+.inputMessage {
+  font-size: 100%;
+}
+
+.log {
+  color: gray;
+  font-size: 70%;
+  margin: 5px;
+  text-align: center;
+}
+
+/* Messages */
+
+.chatArea {
+  height: 100%;
+  padding-bottom: 60px;
+}
+
+.messages {
+  height: 100%;
+  margin: 0;
+  overflow-y: scroll;
+  padding: 10px 20px 10px 20px;
+  text-align: right;
+}
+
+.message.typing .messageBody {
+  color: gray;
+}
+
+.username {
+  font-weight: 500;
+  overflow: hidden;
+  padding-right: 15px;
+  text-align: left;
+  font-size: 16px;
+}
+
+/* Input */
+
+.inputMessage {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #808080;
+  bottom: 0;
+  height: 60px;
+  outline: none;
+  padding-right: 10px;
+  position: absolute;
+  right: 0;
+  width: 25%;
+}
+
+/**
+ * Canvas
+ */
+
+ .whiteboard {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.colors {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 75%;
+  padding-left: 25px;
+  padding-bottom: 5px;
+}
+
+.color {
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+}
+
+#toolbox {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.toolbox-group {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.toolbox-group:last-child {
+  margin-right: 0;
+}
+
+.pencil-sizes-container {
+  display: flex;
+}
+
+.canvas-button {
+  height: 50px;
+  width: 50px;
+  border: 0;
+  background-color: rgb(218, 218, 218);
+}
+
+.canvas-button::-moz-focus-inner {
+  border: 0;
+}
+
+.color-button-container {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.color-button-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.color-button {
+  height: 24px;
+  width: 24px;
+  border: 0;
+}
+
+.color-button::-moz-focus-inner {
+  border: 0;
+}
+
+#color-picker {
+  border: 0;
+  background-color: rgb(218, 218, 218);
+  height: 50px;
+  width: 50px;
+  padding: 0px;
+}
+
+.line-width-button + .line-width-button-content {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line-width-button-content {
+  background-color: rgb(218, 218, 218);
+}
+
+.line-width-button:checked + .line-width-button-content {
+  background-color: rgb(148, 171, 235);
+}
+
+button:hover,
+input[type="button"]:hover,
+.line-width-button-content:hover,
+#color-picker:hover {
+    /** Important insures it won't be prevented by a 'transparent' main color*/
+    background-color: rgb(148, 171, 235) !important;
+}
+
+.custom-check-or-radio {
+  /* Little hack in order to hide the original components of the check/radio button */
+  opacity: 0.0;
+  position: absolute;
+}
+
+.dot {
+  background-color: black;
+  border-radius: 50%;
+}
